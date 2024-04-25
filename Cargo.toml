@@ -14,7 +14,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 pyo3 = { version = "0.21", features = ["extension-module", "macros"] }
-rina-pp = { version = "0.9.25", git = "https://github.com/osuthailand/rina-pp-sys", features = ["sync"] }
+rina-pp = { version = "0.9.24", git = "https://github.com/osuthailand/rina-pp-sys", features = ["sync"] }
 
 [profile.release]
 lto = true
