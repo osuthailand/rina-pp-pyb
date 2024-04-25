@@ -1,20 +1,20 @@
 [package]
-name = "rosu-pp-py"
+name = "rina-pp-pyb"
 version = "1.0.0"
 edition = "2021"
-authors = ["Max Ohn <ohn.m@hotmail.de>"]
+authors = ["Max Ohn <ohn.m@hotmail.de>", "Simon G."]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/MaxOhn/rosu-pp-py"
+repository = "https://github.com/osuthailand/rina-pp-pyb"
 description = "Difficulty and performance calculation for osu!"
 
 [lib]
-name = "rosu_pp_py"
+name = "rina_pp_pyb"
 crate-type = ["cdylib"]
 
 [dependencies]
 pyo3 = { version = "0.21", features = ["extension-module", "macros"] }
-rosu-pp = { version = "1.0.0", features = ["sync"] }
+rina-pp = { version = "0.9.25", features = ["sync"] }
 
 [profile.release]
 lto = true

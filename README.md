@@ -1,35 +1,35 @@
-# rosu-pp-py
+# rina-pp-pyb
 
 Library to calculate difficulty and performance attributes for all [osu!] modes.
 
-This is a python binding to the [Rust] library [rosu-pp] which was bootstrapped through [PyO3].
+This is a python binding to the [Rust] library [rina-pp] which was bootstrapped through [PyO3].
 As such, its performance is much faster than a native python library.
 
 ## Usage
 
 The library exposes multiple classes:
-- [`Beatmap`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L23-L101): Parsed `.osu` file
-- [`GameMode`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L5-L13)
+- [`Beatmap`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L23-L101): Parsed `.osu` file
+- [`GameMode`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L5-L13)
 - Calculators
-  - [`Difficulty`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L103-L251): Class to calculate difficulty attributes, strains, or create gradual calculators
-  - [`Performance`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L253-L439): Performance attributes calculator
-  - [`GradualDifficulty`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L441-L465): Calculator to calculate difficulty attributes after each hitobject
-  - [`GradualPerformance`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L467-L493): Calculator to calculator performance attributes after each hitresult
-  - [`BeatmapAttributesBuilder`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L495-L617): Beatmap attributes calculator
+  - [`Difficulty`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L103-L251): Class to calculate difficulty attributes, strains, or create gradual calculators
+  - [`Performance`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L253-L439): Performance attributes calculator
+  - [`GradualDifficulty`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L441-L465): Calculator to calculate difficulty attributes after each hitobject
+  - [`GradualPerformance`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L467-L493): Calculator to calculator performance attributes after each hitresult
+  - [`BeatmapAttributesBuilder`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L495-L617): Beatmap attributes calculator
 - Results
-  - [`DifficultyAttributes`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L666-L853)
-  - [`Strains`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L928-L998): Strain values of a difficulty calculation, suitable to plot difficulty over time
-  - [`PerformanceAttributes`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L855-L926)
-  - [`BeatmapAttributes`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L1000-L1030)
-- [`HitResultPriority`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L15-L21): Passed to `Performance`, decides whether specified accuracy should be realized through good or bad hitresults
-- [`ScoreState`](https://github.com/MaxOhn/rosu-pp-py/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rosu_pp_py.pyi#L619-L664): Hitresults and max combo of a score, found in `PerformanceAttributes` and passed to gradual calculators
+  - [`DifficultyAttributes`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L666-L853)
+  - [`Strains`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L928-L998): Strain values of a difficulty calculation, suitable to plot difficulty over time
+  - [`PerformanceAttributes`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L855-L926)
+  - [`BeatmapAttributes`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L1000-L1030)
+- [`HitResultPriority`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L15-L21): Passed to `Performance`, decides whether specified accuracy should be realized through good or bad hitresults
+- [`ScoreState`](https://github.com/osuthailand/rina-pp-pyb/blob/f0f08fe9c9a94331840db67d5cf3b9b8cd15ea55/rina_pp_pyb.pyi#L619-L664): Hitresults and max combo of a score, found in `PerformanceAttributes` and passed to gradual calculators
 
 ## Example
 
 ### Calculating performance
 
 ```py
-import rosu_pp_py as rosu
+import rina_pp_pyb as rosu
 
 # either `path`, `bytes`, or `content` must be specified when parsing a map
 map = rosu.Beatmap(path = "/path/to/file.osu")
@@ -76,7 +76,7 @@ print(f'PP: {attrs.pp}/{max_attrs.pp} | Stars: {max_attrs.difficulty.stars}')
 ### Gradual calculation
 
 ```py
-import rosu_pp_py as rosu
+import rina_pp_pyb as rosu
 
 # Parsing the map, this time through the `content` kwarg
 with open("/path/to/file.osu") as file:
@@ -118,29 +118,29 @@ while True:
     i += 1
 ```
 
-## Installing rosu-pp-py
+## Installing rina-pp-pyb
 
-Installing rosu-pp-py requires a [supported version of Python and Rust](https://github.com/PyO3/PyO3#usage).
+Installing rina-pp-pyb requires a [supported version of Python and Rust](https://github.com/PyO3/PyO3#usage).
 
 Once [Python] and [Rust](https://www.rust-lang.org/learn/get-started) are ready to go, you can install the project with pip:
 
 ```sh
-$ pip install rosu-pp-py
+$ pip install rina-pp-pyb
 ```
 
 or
 
 ```
-$ pip install git+https://github.com/MaxOhn/rosu-pp-py
+$ pip install git+https://github.com/osuthailand/rina-pp-pyb
 ```
 
 ## Learn More
-- [rosu-pp]
+- [rina-pp]
 - [Rust]
 - [PyO3]
 
 [osu!]: https://osu.ppy.sh/home
 [Rust]: https://www.rust-lang.org
-[rosu-pp]: https://github.com/MaxOhn/rosu-pp
+[rina-pp]: https://github.com/osuthailand/rina-pp
 [PyO3]: https://github.com/PyO3/pyo3
 [Python]: https://www.python.org/downloads/
