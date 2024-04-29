@@ -1,7 +1,7 @@
 use std::fmt::{Debug, Formatter, Result as FmtResult};
 
 use pyo3::pyclass;
-use rosu_pp::model::mode::GameMode;
+use rina_pp::model::mode::GameMode;
 
 #[pyclass(name = "GameMode")]
 #[derive(Copy, Clone, Default)]

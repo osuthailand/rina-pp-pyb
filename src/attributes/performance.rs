@@ -1,5 +1,5 @@
 use pyo3::pyclass;
-use rosu_pp::{
+use rina_pp::{
     any::PerformanceAttributes, catch::CatchPerformanceAttributes,
     mania::ManiaPerformanceAttributes, osu::OsuPerformanceAttributes,
     taiko::TaikoPerformanceAttributes,
