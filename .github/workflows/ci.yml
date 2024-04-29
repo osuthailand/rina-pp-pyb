@@ -113,9 +113,10 @@ jobs:
         with:
           name: pypi_files_${{ matrix.os }}_${{ matrix.target }}_${{ matrix.interpreter || 'all' }}_${{ matrix.manylinux }}
           path: dist
+          
   release:
     name: Release
-    needs: [clippy, build-sdist]
+    needs: [clippy, build, build-sdist]
     if: success() && startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
 
