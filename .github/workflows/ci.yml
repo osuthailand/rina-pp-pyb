@@ -60,20 +60,7 @@ jobs:
       matrix:
         os: [linux, macos, windows]
         target: [x86_64, aarch64]
-        manylinux: [auto]
         include:
-          # manylinux
-          - os: linux
-            manylinux: auto
-            target: aarch64
-          - os: linux
-            manylinux: auto
-            target: armv7
-            interpreter: 3.8 3.9 3.10 3.11 3.12
-          - os: linux
-            manylinux: auto
-            target: x86_64
-
           # musllinux
           - os: linux
             manylinux: musllinux_1_1
