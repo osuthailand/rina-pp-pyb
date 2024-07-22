@@ -259,15 +259,15 @@ dependencies = [
 
 [[package]]
 name = "rina-pp"
-version = "0.9.26"
-source = "git+https://github.com/osuthailand/rina-pp-sys#19238ed8e5c45a35f7a50302b90fb644e38f6d87"
+version = "1.0.0"
+source = "git+https://github.com/osuthailand/rina-pp-sys#533bca710bdce8a33c56f3a53925950d33cf48ef"
 dependencies = [
  "rosu-map",
 ]
 
 [[package]]
 name = "rina-pp-pyb"
-version = "1.0.2"
+version = "1.0.4"
 dependencies = [
  "openssl",
  "pyo3",

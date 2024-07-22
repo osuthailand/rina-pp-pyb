@@ -14,7 +14,9 @@ define_class! {
         pub stars: f64!,
         pub is_convert: bool!,
         pub aim: f64?,
+        pub aim_strain_difficulty: f64?,
         pub speed: f64?,
+        pub speed_strain_difficulty: f64?,
         pub flashlight: f64?,
         pub slider_factor: f64?,
         pub speed_note_count: f64?,
@@ -41,7 +43,9 @@ impl From<OsuDifficultyAttributes> for PyDifficultyAttributes {
     fn from(attrs: OsuDifficultyAttributes) -> Self {
         let OsuDifficultyAttributes {
             aim,
+            aim_strain_difficulty,
             speed,
+            speed_strain_difficulty,
             flashlight,
             slider_factor,
             speed_note_count,
@@ -60,7 +64,9 @@ impl From<OsuDifficultyAttributes> for PyDifficultyAttributes {
             stars,
             is_convert: false,
             aim: Some(aim),
+            aim_strain_difficulty: Some(aim_strain_difficulty),
             speed: Some(speed),
+            speed_strain_difficulty: Some(speed_strain_difficulty),
             flashlight: Some(flashlight),
             slider_factor: Some(slider_factor),
             speed_note_count: Some(speed_note_count),
@@ -173,7 +179,9 @@ impl TryFrom<PyDifficultyAttributes> for DifficultyAttributes {
             stars,
             is_convert,
             aim,
+            aim_strain_difficulty,
             speed,
+            speed_strain_difficulty,
             flashlight,
             slider_factor,
             speed_note_count,
@@ -199,7 +207,9 @@ impl TryFrom<PyDifficultyAttributes> for DifficultyAttributes {
             PyGameMode::Osu => {
                 if let (
                     Some(aim),
+                    Some(aim_strain_difficulty),
                     Some(speed),
+                    Some(speed_strain_difficulty),
                     Some(flashlight),
                     Some(slider_factor),
                     Some(speed_note_count),
@@ -211,7 +221,9 @@ impl TryFrom<PyDifficultyAttributes> for DifficultyAttributes {
                     Some(n_spinners),
                 ) = (
                     aim,
+                    aim_strain_difficulty,
                     speed,
+                    speed_strain_difficulty,
                     flashlight,
                     slider_factor,
                     speed_note_count,
@@ -224,7 +236,9 @@ impl TryFrom<PyDifficultyAttributes> for DifficultyAttributes {
                 ) {
                     return Ok(Self::Osu(OsuDifficultyAttributes {
                         aim,
+                        aim_strain_difficulty,
                         speed,
+                        speed_strain_difficulty,
                         flashlight,
                         slider_factor,
                         speed_note_count,
